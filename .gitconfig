@@ -1,3 +1,13 @@
 [user]
 	name = BOJIT
 	email = 35117353+BOJIT@users.noreply.github.com
+[core]
+	excludesfile = /Users/james/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/james/.stCommitMsg

@@ -33,8 +33,8 @@ rm -rf fonts
 case $machine in
     Mac)
 	if test ! $(command -v brew); then
-            echo "Installing Homebrew..."
-            ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+            #echo "Installing Homebrew..."
+            #ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         fi
         brew update
         ;;
@@ -45,7 +45,7 @@ esac
 # Install zsh (Only MacOS and Debian for now)
 case $machine in
     Mac)
-        brew install zsh
+#        brew install zsh - default from Catalina Onwards
         ;;
     Linux)
         apt install zsh
@@ -54,10 +54,10 @@ esac
 
 # Set zsh as Current shell (temporary, should be changed in terminal settings)
 # @TODO find way to automate this across Iterm2, Windows Terminal (WSL) and XTerm
-chsh -s /bin/zsh
+#chsh -s /bin/zsh
 
 # Symlink dotfiles:
 ln -s -f ./.config ~/.config
 ln -s -f ./.oh-my-zsh ~/.oh-my-zsh
-ln -s -f ./.gitconfig ~./.gitconfig
+ln -s -f ./.gitconfig ~/.gitconfig
 ln -s -f ./.zshrc ~/.zshrc
