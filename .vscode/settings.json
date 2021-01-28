@@ -1,0 +1,6 @@
+{
+    "git.enabled": false,
+    "editor.renderWhitespace": "all",
+    "files.insertFinalNewline": true,
+    "terminal.integrated.fontFamily": "Droid Sans Mono for Powerline"
+}
